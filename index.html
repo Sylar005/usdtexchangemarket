@@ -44,39 +44,6 @@
       margin-bottom: 25px;
     }
 
-    .upload-section {
-      margin-top: 30px;
-    }
-
-    .upload-label {
-      font-weight: 500;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .upload-icon {
-      background-color: #1f1f1f;
-      padding: 12px 16px;
-      border-radius: 12px;
-      cursor: pointer;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .upload-icon:hover {
-      background-color: #333;
-    }
-
-    .upload-icon::before {
-      content: '📎';
-      font-size: 22px;
-      color: #fff;
-    }
-
-    .upload-icon input {
-      display: none;
-    }
-
     @media (max-width: 480px) {
       h1 {
         font-size: 18px;
@@ -97,13 +64,6 @@
 
     <h1>Number of Exchanges</h1>
     <div class="value" id="count">Loading...</div>
-
-    <div class="upload-section">
-      <span class="upload-label">Attach Payslip here</span>
-      <label class="upload-icon">
-        <input type="file" id="payslipUpload" />
-      </label>
-    </div>
   </div>
 
   <script>
@@ -121,13 +81,6 @@
     }
 
     fetchStats();
-
-    document.getElementById('payslipUpload').addEventListener('change', function () {
-      const file = this.files[0];
-      if (file) {
-        alert("Payslip selected: " + file.name);
-      }
-    });
   </script>
 </body>
 </html>
